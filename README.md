@@ -1,7 +1,8 @@
 This script will tweet new annotations that happen at [Infinite
 Ulysses](http://www.infiniteulysses.com/). I guess something like IFTTT could
 take the RSS feed and send updates to Twitter. But to get the text that has
-been annotated a little bit of html parsing of the RSS item is needed.
+been annotated a little bit of html parsing of the RSS item description
+is needed.
 
 ## Install
 
