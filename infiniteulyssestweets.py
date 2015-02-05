@@ -6,6 +6,7 @@ Tweet when something is annotated at http://www.infiniteulysses.com/.
 
 import re
 import bs4
+import time
 import tweepy
 import feedparser
 
@@ -30,3 +31,4 @@ for entry in feed['entries']:
     # tweepy silently ignores errors due to duplicate tweets and messages 
     # that are too long ... which is nice
     twtr.update_status(msg)
+    time.sleep(10)
