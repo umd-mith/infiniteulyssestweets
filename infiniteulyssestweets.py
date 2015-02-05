@@ -29,6 +29,8 @@ for entry in feed['entries']:
     target = re.split(':.', desc.select('.field-quote')[0].text, 1)[1]
     msg = '"%s" annotated by %s - %s' % (target, author, link)
     # tweepy silently ignores errors due to duplicate tweets and messages 
-    # that are too long ... which is nice
+    # that are too long ... which is nice, since it means we don't have 
+    # to keep a local database of some kind remembering which updates
+    # we have sent and which we haven't
     twtr.update_status(msg)
     time.sleep(10)
