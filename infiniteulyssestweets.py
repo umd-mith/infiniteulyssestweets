@@ -27,7 +27,6 @@ for entry in feed['entries']:
     desc = bs4.BeautifulSoup(entry['description'])
     target = re.split(':.', desc.select('.field-quote')[0].text, 1)[1]
     msg = '"%s" annotated by %s - %s' % (target, author, link)
-    if len(msg) < 140:
-        # tweepy silently ignores errors due to duplicate tweets and messages 
-        # that are too long ... which is nice
-        twtr.update_status(msg)
+    # tweepy silently ignores errors due to duplicate tweets and messages 
+    # that are too long ... which is nice
+    twtr.update_status(msg)
